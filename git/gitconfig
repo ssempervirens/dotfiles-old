@@ -33,7 +33,7 @@
   merge = refs/heads/master
 
 [user]
-	name = camfassett
+	name = ssempervirens
 	email = camillefassett@gmail.com
 [credential]
 	helper = osxkeychain
