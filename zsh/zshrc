@@ -14,13 +14,8 @@ ZSH_THEME="customcolors"
 export ZPLUG_HOME=$HOME/zplug
 
 if [[ ! -e $ZPLUG_HOME/init.zsh ]]; then
-    # install zplug if missing and on mac
-    if [[ "$OSTYPE" == "darwin"* ]]; then    
-        brew install zplug
-    else
-        git clone https://github.com/zplug/zplug.git "$ZPLUG_HOME"
-    fi
-
+    # install zplug if missing 
+    git clone https://github.com/zplug/zplug.git "$ZPLUG_HOME"
 fi
 
 source $ZPLUG_HOME/init.zsh
