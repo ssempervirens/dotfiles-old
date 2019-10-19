@@ -11,14 +11,14 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="customcolors"
 
 # zplug
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME=$HOME/zplug
 
 if [[ ! -e $ZPLUG_HOME/init.zsh ]]; then
     # install zplug if missing and on mac
     if [[ "$OSTYPE" == "darwin"* ]]; then    
         brew install zplug
-    else 
-        echo "you should install zplug"
+    else
+        git clone https://github.com/zplug/zplug.git "$ZPLUG_HOME"
     fi
 
 fi
@@ -51,8 +51,6 @@ alias ll="ls -AlFGgh"
 
 plugins=(
     git
-    zsh-syntax-highlighting
-    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
